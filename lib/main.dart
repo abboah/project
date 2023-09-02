@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project/home_screen.dart';
 
-void main () {
-  runApp(MyApp as Widget);
+void main() {
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,29 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("App Bar"),
-        
-        centerTitle: true,
-      ),
-      body: Column( 
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("Lorem Ipsum"),
-          Text("Lorem Ipsum"),Text("Lorem Ipsum"),Text("Lorem Ipsum"),Text("Lorem Ipsum"),Text("Lorem Ipsum"),
-        ],
-      ),     
+      debugShowCheckedModeBanner: false,
     );
   }
 }
